@@ -46,7 +46,7 @@ def index(request):
 
         city_weather = {
             'city' : city.name,
-            'temperature' : r['main']['temp'],
+            'temperature' : round((r['main']['temp']-32)/1.8, 1),
             'description' : r['weather'][0]['description'],
             'icon' : r['weather'][0]['icon'],
         }
